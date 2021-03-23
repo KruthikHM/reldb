@@ -9,5 +9,4 @@ public class DemdbApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemdbApplication.class, args);
     }
-
 }
