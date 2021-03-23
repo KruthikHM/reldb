@@ -13,6 +13,11 @@ public class ReleaseTableController {
     @Autowired
     ReleaseRepository repo;
 
-    public
+    @PostMapping("/reg")
+    public Optional reg(@RequestBody ReleaseTableEntity rel){
+        repo.save(rel);
+        Optional o = repo.findById(rel.getEmpID());
+        return o;
+    }
 
 }
