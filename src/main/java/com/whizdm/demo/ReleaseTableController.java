@@ -10,4 +10,9 @@ import java.util.Optional;
 @RestController
 public class ReleaseTableController {
 
+    @Autowired
+    ReleaseRepository repo;
+
+    public
+
 }
