@@ -56,7 +56,7 @@ public class ReleaseTableEntity {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getRelease_id() {
         return release_id;
     }
