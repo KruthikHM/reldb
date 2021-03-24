@@ -31,10 +31,50 @@ public class dailyController {
     @GetMapping("/daily/getpoddata")
     public List<Object> querypod(){
         List<Object> l = repod.findpod();
-        System.out.println("Hello guys");
         System.out.println(l.toString());
         return l;
     }
 
+    @GetMapping("/daily/getimpactdata")
+    public List<Object> queryimpact(){
+        List<Object> l = repod.findimpact();
+        System.out.println(l.toString());
+        return l;
+    }
+
+    @GetMapping("/daily/getimpactareasdata")
+    public List<Object> queryimpactarea(){
+        List<Object> l = repod.findimpactareas();
+        System.out.println(l.toString());
+        return l;
+    }
+
+    @GetMapping("/daily/getrelease_typedata")
+    public List<Object> queryrelease_type(){
+        List<Object> l = repod.findrelease_type();
+        System.out.println(l.toString());
+        return l;
+    }
+
+    @GetMapping("/daily/getgenericdata")
+    public List<Object> querygeneric(){
+        List<Object> l = repod.findgenerics();
+        System.out.println(l.toString());
+        return l;
+    }
+
+    @GetMapping("/daily/getbranch_namedata")
+    public List<Object> querybranch_name(){
+        List<Object> l = repod.findbranch_name();
+        System.out.println(l.toString());
+        return l;
+    }
+
+    @GetMapping("/daily/getsqlqueriesapproval")
+    public List<Object> querysql_queries_approval(){
+        List<Object> l = repod.findsql_queries_approval();
+        System.out.println(l.toString());
+        return l;
+    }
 
 }
