@@ -13,7 +13,7 @@ public class dailyController {
     @Autowired
     daily_repository repod;
 
-    @PostMapping("/hotfix/populate")
+    @PostMapping("/daily/populate")
     public Optional popu(@RequestBody daily_table dai){
         repod.save(dai);
         return repod.findById(dai.getSl_no());

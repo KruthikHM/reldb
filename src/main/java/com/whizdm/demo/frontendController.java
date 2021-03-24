@@ -12,7 +12,7 @@ public class frontendController {
     @Autowired
     FrontendRepository repof;
 
-    @PostMapping("/hotfix/populate")
+    @PostMapping("/frontend/populate")
     public Optional popu(@RequestBody frontend_dropdown front){
         repof.save(front);
         return repof.findById(front.getSl_no());
