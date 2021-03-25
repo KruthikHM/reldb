@@ -33,7 +33,7 @@ public interface daily_repository extends JpaRepository<daily_table,Long> {
     @Query(value = "select release_status from daily_table", nativeQuery = true)
     List<Object> findrelease_status();
 
-    @Query(value = "select release_type from daily_table", nativeQuery = true)
+    @Query(value = "select type_of_release from daily_table", nativeQuery = true)
     List<Object> findtyperelease();
 
 
