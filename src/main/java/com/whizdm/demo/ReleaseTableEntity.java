@@ -69,45 +69,6 @@ public class ReleaseTableEntity {
         return empID;
     }
 
-
-    @Override
-    public String toString() {
-        return "ReleaseTableEntity{" +
-                "release_id=" + release_id +
-                ", empID=" + empID +
-                ", pod_id='" + pod_id + '\'' +
-                ", Description='" + Description + '\'' +
-                ", impact='" + impact + '\'' +
-                ", impact_area='" + impact_area + '\'' +
-                ", release_status='" + release_status + '\'' +
-                ", dev_poc='" + dev_poc + '\'' +
-                ", qa_poc='" + qa_poc + '\'' +
-                ", approved_by='" + approved_by + '\'' +
-                ", type_of_release='" + type_of_release + '\'' +
-                ", type_of_release2='" + type_of_release2 + '\'' +
-                ", type_of_release3='" + type_of_release3 + '\'' +
-                ", prlink=" + prlink +
-                ", release_date=" + release_date +
-                ", release_window='" + release_window + '\'' +
-                ", source_rel_date='" + source_rel_date + '\'' +
-                ", src_of_hotfix='" + src_of_hotfix + '\'' +
-                ", item='" + item + '\'' +
-                ", tech_pr_signoff=" + tech_pr_signoff +
-                ", sql_approval='" + sql_approval + '\'' +
-                ", heavy_sql_alter='" + heavy_sql_alter + '\'' +
-                ", stage_qa_signoff=" + stage_qa_signoff +
-                ", stage_integration_signoff=" + stage_integration_signoff +
-                ", roll_out_percentage=" + roll_out_percentage +
-                ", requires_bar='" + requires_bar + '\'' +
-                ", bar_date=" + bar_date +
-                ", platform='" + platform + '\'' +
-                ", release_version='" + release_version + '\'' +
-                ", release_signoff_date=" + release_signoff_date +
-                ", qaEmail='" + qaEmail + '\'' +
-                ", managerEmail='" + managerEmail + '\'' +
-                '}';
-    }
-
     public void setEmpID(Long empID) {
         this.empID = empID;
     }

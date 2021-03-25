@@ -16,6 +16,16 @@ public class daily_table {
     @Column(nullable = true)
     private String release_type;
 
+    private String release_status;
+
+    public String getRelease_status() {
+        return release_status;
+    }
+
+    public void setRelease_status(String release_status) {
+        this.release_status = release_status;
+    }
+
     public String getType_of_release() {
         return type_of_release;
     }

@@ -12,6 +12,7 @@ public class frontendController {
     FrontendRepository repof;
 
     @PostMapping("/frontend/populate")
+    @CrossOrigin
     public Optional popu(@RequestBody frontend_dropdown front){
         repof.save(front);
         return repof.findById(front.getSl_no());

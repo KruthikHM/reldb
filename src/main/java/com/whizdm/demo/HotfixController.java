@@ -1,10 +1,7 @@
 package com.whizdm.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,6 +13,7 @@ public class HotfixController {
     HotfixRepository repoh;
 
     @PostMapping("/hotfix/populate")
+    @CrossOrigin
     public Optional popu(@RequestBody hotfix_entity hot){
         repoh.save(hot);
         return repoh.findById(hot.getSl_no());
@@ -32,7 +30,7 @@ public class HotfixController {
     private String type_of_release;
      */
 
-    @PostMapping("/hotfix/getpoddata")
+    @GetMapping("/hotfix/getpoddata")
     @CrossOrigin
     public List<Object> poddata(){
         List<Object> l = repoh.pod();
@@ -40,7 +38,7 @@ public class HotfixController {
         return l;
     }
 
-    @PostMapping("/hotfix/getimpact_areasdata")
+    @GetMapping("/hotfix/getimpact_areasdata")
     @CrossOrigin
     public List<Object> impact_areas(){
         List<Object> l = repoh.impact_areas();
@@ -48,7 +46,7 @@ public class HotfixController {
         return l;
     }
 
-    @PostMapping("/hotfix/getimpactdata")
+    @GetMapping("/hotfix/getimpactdata")
     @CrossOrigin
     public List<Object> impact(){
         List<Object> l = repoh.impact();
@@ -56,7 +54,7 @@ public class HotfixController {
         return l;
     }
 
-    @PostMapping("/hotfix/getrelease_statusdata")
+    @GetMapping("/hotfix/getrelease_statusdata")
     @CrossOrigin
     public List<Object> release_status(){
         List<Object> l = repoh.release_status();
@@ -64,7 +62,7 @@ public class HotfixController {
         return l;
     }
 
-    @PostMapping("/hotfix/getapproved_bydata")
+    @GetMapping("/hotfix/getapproved_bydata")
     @CrossOrigin
     public List<Object> approved_by(){
         List<Object> l = repoh.approved_by();
@@ -72,7 +70,7 @@ public class HotfixController {
         return l;
     }
 
-    @PostMapping("/hotfix/gettype_of_releasedata")
+    @GetMapping("/hotfix/gettype_of_releasedata")
     @CrossOrigin
     public List<Object> type_of_release(){
         List<Object> l = repoh.type_of_release();
